@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biblioteca Digital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar container">
+            <h1>Biblioteca Digital</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#livros">Livros</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <!-- Sobre -->
+        <section id="sobre" class="section section-about">
+            <h2>Sobre a Biblioteca</h2>
+            <p>Bem-vindo à nossa Biblioteca Digital, um espaço dedicado para consulta e descoberta de livros de variados gêneros e autores.</p>
+            <img src="https://covers.openlibrary.org/b/id/105478-L.jpg" alt="Livros empilhados" />
+        
+        </section>
+
+        <!-- Livros -->
+        <section id="livros" class="section section-books">
+            <div class="section-header">
+                <h2>Livros Disponíveis</h2>
+                <input
+                    type="text"
+                    id="pesquisa-livros"
+                    placeholder="Pesquisar livro pelo título..."
+                    autocomplete="off"
+                />
+            </div>
+            <div id="livros-lista" class="livros-grid">
+                <!-- Cards dos livros inseridos via JS -->
+            </div>
+            <p id="livros-erro" class="error-message" style="display:none;">Nenhum livro encontrado.</p>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="section section-contact">
+            <h2>Contato</h2>
+            <form id="form-contato" novalidate>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Seu nome" />
+                    <span class="error-msg" id="erro-nome"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com" />
+                    <span class="error-msg" id="erro-email"></span>
+                </div>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Biblioteca Digital. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Modal para detalhes do livro -->
+    <div id="modal-livro" class="modal">
+      <div class="modal-content">
+        <span id="fechar-modal" class="fechar">&times;</span>
+        <img id="modal-imagem" src="" alt="Capa do Livro" />
+        <div class="modal-info">
+          <h3 id="modal-titulo"></h3>
+          <p><strong>Autores:</strong> <span id="modal-autores"></span></p>
+          <p><strong>Editora:</strong> <span id="modal-editora"></span></p>
+          <p><strong>Páginas:</strong> <span id="modal-paginas"></span></p>
+          <p><strong>Descrição:</strong></p>
+          <p id="modal-descricao"></p>
+          <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn">Ver no Google Books</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

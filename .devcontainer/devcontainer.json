@@ -1,0 +1,14 @@
+{
+    "name": "Meu Ambiente Web Padrão",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ritwickdey.liveserver",
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ms-azuretools.vscode-docker",
+                "editorconfig.editorconfig"
+            ]
+        }
+    }
+}
