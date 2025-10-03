@@ -16,7 +16,6 @@ A página é dividida nas seguintes seções:
 - **JavaScript** para interatividade e consulta à API de livros.
 
 ## Instruções de Execução
-
 1. Clone este repositório.
 2. Abra a pasta do projeto no VS Code.
 3. Se você estiver usando o VS Code, instale a extensão "Live Server" e clique em "Go Live" para visualizar o projeto no seu navegador.
