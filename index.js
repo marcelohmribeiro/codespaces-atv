@@ -25,7 +25,6 @@ function criarCardLivro(livro) {
   const imagem = info.imageLinks?.thumbnail
     ? info.imageLinks.thumbnail.replace('http:', 'https:')
     : 'images/livro-imagem.jpg';
-
   const div = document.createElement('div');
   div.classList.add('livro');
 
@@ -133,12 +132,9 @@ function validarEmail(email) {
 
 formContato.addEventListener('submit', (event) => {
   event.preventDefault();
-
   let valido = true;
-
   erroNome.textContent = '';
   erroEmail.textContent = '';
-
   if (inputNome.value.trim() === '') {
     erroNome.textContent = 'Por favor, insira seu nome.';
     valido = false;
